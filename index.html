@@ -7,47 +7,55 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="container">
+  <div class="container" >
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
-        <h1> Belly-Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+        <h1 style="background-color:rgba(167, 151, 204, 0.692);"> Belly-Button Biodiversity Dashboard</h1>
+        <p style="background-color:rgba(167, 151, 204, 0.692);">Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-          <h5>Test Subject ID No.:</h5>
+    <h5 style="text-align: center;"><b>This dashboards shows information about volunteers who participated in a belly button survery.
+      It includes the demographic information, and visualizations around the belly button bacterial data for each volunteer, 
+      the top 10 bacterial species in a volunteers belly button and a speedometer like visualization of each volunteer's belly button wash frequency. 
+      
+      The visualization helps volunteers identify whether a species that Improbable Beef identifies as a candidate to manufacture synthetic beef, is found in their navel. 
+      </b></h5>
+    <div class="row bg-dark">
+      <div class="col-md-2" style ="background-color:rgba(182,212,194,0)">
+        <div class="well" style ="background-color:rgba(182,212,194,0)">
+          <h5><b>Test Subject ID No.:</b></h5>
           <!-- <select id="selDataset"></select> -->
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
-        <div class="panel panel-primary">
+        <div class="panel panel-success" style = "background-color:rgba(182,212,194,0)">
           <div class="panel-heading">
             <h3 class="panel-title">Demographic Info</h3>
           </div>
-          <div id="sample-metadata" class="panel-body"></div>
+          <div id="sample-metadata" class="panel-body" style = "color:rgb(36, 148, 101);"></div>
         </div>
       </div>
-      <div class="col-md-5">
+      <div class="row">
+        <div class="col-md-9">
+          <div id="bubble"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
         <div id="bar"></div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-6">
         <div id="gauge"></div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="bubble"></div>
-      </div>
-    </div>
+    
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="plots.js"></script>
+  <script src="charts.js"></script>
 
 </body>
 
