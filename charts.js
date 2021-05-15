@@ -112,8 +112,10 @@ function buildCharts(sample) {
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      title:'<b>Bacteria culture per sample</b>',hovermode:'closest',
-      xaxis:{title:'OTU ID'},margin:{l:100,r:100},
+      title:'<b>Bacteria culture per sample</b>',
+      hovermode:'closest',
+      xaxis:{title:'OTU ID'},
+      margin:{l:100,r:100},
       paper_bgcolor: "rgba(182,212,194,0)",
       plot_bgcolor: "rgba(182,212,194,0)"      
     };
